@@ -8,14 +8,16 @@ public class Battery {
     }
     public void exchange(Battery another){
         this.load = this.load - another.load;
-        another.load = 0;
+        this.load = Math.abs(this.load);
     }
 
     public static void main(String[] args) {
-        Battery battery = new Battery(100);
-        Battery discharge = new Battery(10);
-        System.out.println("The value of the battery:" + battery.load + " " + "discharge:" + discharge.load);
-        battery.exchange(discharge);
-        System.out.println("The value of the battery:" + battery.load + " " + "discharge:" + discharge.load);
+        Battery battery1 = new Battery(100);
+        Battery discharge = new Battery(30);
+        Battery battery2 = new Battery(0);
+        System.out.println("battery1:" + battery1.load + " " + "discharge:" + discharge.load + " " + "battery2:" + battery2.load);
+        battery1.exchange(discharge);
+        battery2.exchange(discharge);
+        System.out.println("battery1:" + battery1.load + " " + "discharge:" + discharge.load + " " + "battery2:" + battery2.load);
     }
 }
