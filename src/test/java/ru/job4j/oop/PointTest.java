@@ -32,7 +32,8 @@ public class PointTest {
         Point a = new Point(4, 2);
         Point b = new Point(2, 1);
         Point z = new Point(2, 1);
-        double dist = a.distance3d(b);
-        assertThat(dist, closeTo(2.23, 0.01));
+        Point point = new Point(a, b, z);
+        double dist = a.distance3d();
+        assertThat(dist, closeTo(2.44, 0.01));
     }
 }
