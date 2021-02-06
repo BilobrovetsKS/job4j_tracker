@@ -29,11 +29,9 @@ public class PointTest {
 
     @Test
     public void testDistance3() {
-        Point a = new Point(4, 2);
-        Point b = new Point(2, 1);
-        Point z = new Point(2, 1);
-        Point point = new Point(a, b, z);
-        double dist = a.distance3d();
-        assertThat(dist, closeTo(2.44, 0.01));
+        Point a = new Point(4, 2, 1);
+        Point b = new Point(2, 1, 3);
+        double dist = a.distance3d(b);
+        assertThat(dist, closeTo(3, 0.01));
     }
 }
