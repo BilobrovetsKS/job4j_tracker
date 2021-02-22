@@ -6,6 +6,10 @@ public class Builder extends Engineer {
 
     private String typeBuilding; // Тип проектируемых зданий;
 
+    public Builder(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
+
     public String getProgram() {
         return program;
     }

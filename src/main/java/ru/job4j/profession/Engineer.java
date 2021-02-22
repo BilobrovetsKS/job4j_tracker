@@ -6,11 +6,16 @@ public class Engineer extends Profession{
 
     private int project; // кол-во сделаных проектов
 
+    public Engineer(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
+
     public String getQualification (){
         return qualification;
     }
 
     public int getProject () {
+
         return project;
     }
 }

@@ -7,21 +7,27 @@ public class Profession {
 
     private String education;
 
-    private String birthday;
+        private String birthday;
 
-    public String getName() {
+    public Profession(String name, String surname, String education, String birthday) {
+        this.name = name;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
+    }
+    public String Name() {
         return name;
     }
 
-    public String getSurname() {
+    public String Surname() {
         return surname;
     }
 
-    public String getEducation() {  
+    public String Education() {
         return education;
     }
 
-    public String getBirthday() {
+    public String Birthday() {
         return birthday;
     }
 }

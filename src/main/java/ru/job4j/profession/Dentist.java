@@ -6,6 +6,10 @@ public class Dentist extends Doctor{
 
     private int whitening; // кол-во проведенных отбеливаний
 
+    public Dentist(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
+
     public int getProfHygiene() {
         return profHygiene;
     }

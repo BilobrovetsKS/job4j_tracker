@@ -8,6 +8,10 @@ public class Doctor extends Profession {
 
     private String diagnosis; // диагнозы пациентов
 
+    public Doctor(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
+
 
     public String getSpecialization() {
     return specialization;
