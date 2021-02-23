@@ -7,6 +7,12 @@ public class Item {
     private String name;
     private LocalDateTime created = LocalDateTime.now();
 
+    public Item(String name, int identifier){
+        this.name = name;
+        id = identifier;
+
+    }
+
     public int getId() {
         return id;
     }
@@ -26,10 +32,4 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Item(String name, int identifier){
-        this.name = name;
-        id = identifier;
-
-            }
 }
