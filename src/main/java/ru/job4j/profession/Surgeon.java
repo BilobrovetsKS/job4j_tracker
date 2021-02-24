@@ -6,8 +6,11 @@ public class Surgeon extends Doctor {
 
     private String type; // тип операций
 
-    public Surgeon(String name, String surname, String education, String birthday) {
-        super(name, surname, education, birthday);
+    public Surgeon(String name, String surname, String education, String birthday,
+                   String specialization, int patients, String diagnosis, int operation, String type) {
+        super(name, surname, education, birthday, specialization, patients, diagnosis);
+        this.operation = operation;
+        this.type = type;
     }
 
     public int getOperation(){

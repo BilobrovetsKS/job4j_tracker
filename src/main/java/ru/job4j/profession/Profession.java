@@ -15,19 +15,19 @@ public class Profession {
         this.education = education;
         this.birthday = birthday;
     }
-    public String Name() {
+    public String getName() {
         return name;
     }
 
-    public String Surname() {
+    public String getSurname() {
         return surname;
     }
 
-    public String Education() {
+    public String getEducation() {
         return education;
     }
 
-    public String Birthday() {
+    public String getBirthday() {
         return birthday;
     }
 }

@@ -6,8 +6,11 @@ public class Builder extends Engineer {
 
     private String typeBuilding; // Тип проектируемых зданий;
 
-    public Builder(String name, String surname, String education, String birthday) {
-        super(name, surname, education, birthday);
+    public Builder(String name, String surname, String education, String birthday,
+                   String qualification, int project, String program, String typeBuilding) {
+        super(name, surname, education, birthday, qualification, project);
+        this.program = program;
+        this.typeBuilding = typeBuilding;
     }
 
     public String getProgram() {
