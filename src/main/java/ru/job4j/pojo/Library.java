@@ -17,7 +17,7 @@ public class Library {
             Book bk = books[i];
             System.out.println(bk.getName() + " " + bk.getPages());
         }
-        System.out.println("Replace book1 to book4:");
+        System.out.println(System.lineSeparator() + "Replace book1 to book4:");
         Book replace = books[0];
         books[0] = books[3];
         books[3] = replace;
@@ -26,10 +26,10 @@ public class Library {
             System.out.println(bk.getName() + " - " + bk.getPages());
         }
 
-        System.out.println("Shown only clean code:");
+        System.out.println(System.lineSeparator() + "Shown only clean code:");
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if (bk.getPages() == 0) {
+            if (bk.getName().equals("Clean code")) {
                 System.out.println(bk.getName() + " - " + bk.getPages());
             }
         }
