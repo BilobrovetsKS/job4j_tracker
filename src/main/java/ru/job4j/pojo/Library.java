@@ -8,11 +8,13 @@ public class Library {
         Book book2 = new Book("Evenings on a farm near dikanka", 352);
         Book book3 = new Book("Chronicles of Amber", 1696);
         Book book4 = new Book("Clean code", 0);
-        Book[] books = new Book[4];
+        Book book5 = new Book(null, 0);
+        Book[] books = new Book[5];
         books[0] = book1;
         books[1] = book2;
         books[2] = book3;
         books[3] = book4;
+        books[4] = book5;
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
             System.out.println(bk.getName() + " " + bk.getPages());
@@ -29,7 +31,7 @@ public class Library {
         System.out.println(System.lineSeparator() + "Shown only clean code:");
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if (bk.getName().equals("Clean code")) {
+            if ("Clean code".equals(bk.getName())) {
                 System.out.println(bk.getName() + " - " + bk.getPages());
             }
         }
