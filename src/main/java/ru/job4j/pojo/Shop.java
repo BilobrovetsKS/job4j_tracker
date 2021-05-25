@@ -22,7 +22,6 @@ public class Shop {
             Product product = products[i];
             if (product == null) {
                 index = i;
-                System.out.println(i);
                 break;
             }
 
