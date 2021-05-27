@@ -24,7 +24,6 @@ public class Shop {
                 index = i;
                 break;
             }
-
         }
         return index;
     }
