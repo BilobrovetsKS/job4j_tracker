@@ -7,10 +7,9 @@ public class Item {
     private String name;
     private LocalDateTime created = LocalDateTime.now();
 
-    public Item(String name, int identifier){
+    public Item(int id, String name){
+        this.id = id;
         this.name = name;
-        id = identifier;
-
     }
 
     public int getId() {
@@ -31,5 +30,13 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
