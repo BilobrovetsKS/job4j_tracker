@@ -17,9 +17,12 @@ public class StartUI {
                 tracker.add(item);
             } else if (select == 1) {
                 Item[] all = tracker.findAll();
-                for (int i = 0; i < all.length; i++) {
-                    Item nam = all[i];
-                    System.out.println(nam);
+                if (all.length > 0) {
+                    for (Item nam : all) {
+                        System.out.println(nam);
+                    }
+                } else {
+                    System.out.println("Items are not found");
                 }
             } else if (select == 2) {
                 System.out.println("Enter id: ");
@@ -27,7 +30,6 @@ public class StartUI {
                 System.out.println("Enter name: ");
                 String name = scanner.nextLine();
                 Item newItem = new Item(name);
-                tracker.replace(id, newItem);
                 if (tracker.replace(id, newItem)) {
                     System.out.println("Successfully");
                 } else {
@@ -56,8 +58,7 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item[] byName = tracker.findByName(name);
                 if (byName.length > 0) {
-                    for (int i = 0; i < byName.length; i++) {
-                        Item nam = byName[i];
+                    for (Item nam : byName) {
                         System.out.println(nam);
                     }
                 } else {
