@@ -48,7 +48,19 @@ public class StartUI {
                 }else {
                     System.out.println("Error, id is not found");
                 }
+            } else if (select == 4) {
+                System.out.println("=== Find by id ===");
+                System.out.println("Enter id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                Item item = tracker.findById(id);
+                if (item != null) {
+                    System.out.println(item);
+                } else {
+                    System.out.println("Error, id: " + id + " is not found");
+                }
+
             }
+
             else if(select == 6) {
                 run = false;
             }
