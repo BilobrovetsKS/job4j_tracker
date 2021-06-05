@@ -39,6 +39,15 @@ public class StartUI {
                 } else {
                     System.out.println("Error, id is not found");
                 }
+            } else if (select == 3) {
+                System.out.println("=== Delete item ===");
+                System.out.println("Enter id: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                if (tracker.delete(id)) {
+                    System.out.println("Item is delete");
+                }else {
+                    System.out.println("Error, id is not found");
+                }
             }
             else if(select == 6) {
                 run = false;
