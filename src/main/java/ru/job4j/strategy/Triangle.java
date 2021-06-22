@@ -10,8 +10,4 @@ public class Triangle implements Shape {
                 + "/___\\" + ln;
 
     }
-
-    public static void main(String[] args) {
-        System.out.println(new Triangle().draw());
-    }
 }
