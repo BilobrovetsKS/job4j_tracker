@@ -70,7 +70,7 @@ public class StartUITest {
     }
 
     @Test
-    public void ShowAllItem() {
+    public void ShowallItem() {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Show all Item"));
