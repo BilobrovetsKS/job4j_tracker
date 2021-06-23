@@ -74,10 +74,21 @@ public class StartUITest {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Show all Item"));
-        Input in = new StubInput(new String[] {"0", "Show all Item", "1"});
-        UserAction[] actions = { new ExitAction()};
+        Input in = new StubInput(new String[] {"0", "1"});
+        UserAction[] actions = { new ShowAllAction(out), new ExitAction()};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findAll()[0].getName(), is("Show all Item"));
+        assertThat(out.toString(), is(
+                "Menu." + System.lineSeparator() +
+                        "0.Show all items" + System.lineSeparator() +
+                        "1.Exit Program" + System.lineSeparator() +
+                        "User chooses: 0" + System.lineSeparator() +
+                        "=== Show all Items ===" + System.lineSeparator() +
+                        "Item{id=1, name='Show all Item'}" + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
+                        "0.Show all items" + System.lineSeparator() +
+                        "1.Exit Program" + System.lineSeparator() +
+                        "User chooses: 1" + System.lineSeparator()
+        ));
     }
 }
 
