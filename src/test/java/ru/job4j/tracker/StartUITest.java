@@ -54,7 +54,18 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", "1", "1"});
         UserAction[] actions = {new FindByIdAction(out), new ExitAction()};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()).getName(), is("Find by Id Items"));
+        assertThat(out.toString(), is(
+                "Menu." + System.lineSeparator() +
+                        "0.Find item by id" + System.lineSeparator() +
+                        "1.Exit Program" + System.lineSeparator() +
+                        "User chooses: 0" + System.lineSeparator() +
+                        "=== Find by id ===" + System.lineSeparator() +
+                        item + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
+                        "0.Find item by id" + System.lineSeparator() +
+                        "1.Exit Program" + System.lineSeparator() +
+                        "User chooses: 1" + System.lineSeparator()
+        ));
     }
 
     @Test
@@ -66,7 +77,18 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", name, "1"});
         UserAction[] actions = {new FindByNameAction(out), new ExitAction()};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()).getName(), is(name));
+        assertThat(out.toString(), is(
+                "Menu." + System.lineSeparator() +
+                        "0.Find items by name" + System.lineSeparator() +
+                        "1.Exit Program" + System.lineSeparator() +
+                        "User chooses: 0" + System.lineSeparator() +
+                        "=== Find by name ===" + System.lineSeparator() +
+                        item + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
+                        "0.Find items by name" + System.lineSeparator() +
+                        "1.Exit Program" + System.lineSeparator() +
+                        "User chooses: 1" + System.lineSeparator()
+        ));
     }
 
     @Test
@@ -83,7 +105,7 @@ public class StartUITest {
                         "1.Exit Program" + System.lineSeparator() +
                         "User chooses: 0" + System.lineSeparator() +
                         "=== Show all Items ===" + System.lineSeparator() +
-                        "Item{id=1, name='Show all Item'}" + System.lineSeparator() +
+                        item + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0.Show all items" + System.lineSeparator() +
                         "1.Exit Program" + System.lineSeparator() +
